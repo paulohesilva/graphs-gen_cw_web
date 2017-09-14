@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Grafos</title>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/simple-sidebar.css" rel="stylesheet">
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Le javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-2.1.0.js"></script>
+<script src="js/grafos.js"></script>
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-alert.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-scrollspy.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-button.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-carousel.js"></script>
+<script src="js/bootstrap-typeahead.js"></script>
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand"><a href="#">Grafos</a></li>
+				<li><a href="#">...</a></li>
+				<li>
+					<div style="color: #2A03F7 !important">Iterações:</div>
+					<div>
+						<input id="iIteracoes" type="text" class="form-control"
+							placeholder="Iterações..." style="width: 180px"
+							data-toggle="tooltip" data-placement="left"
+							title="Tooltip on left">
+					</div>
+				</li>
+				<li>
+					<div style="color: #2A03F7 !important">Cidades:</div>
+					<div>
+						<input id="iPontos" type="text" class="form-control"
+							placeholder="Cidades..." style="width: 140px">
+						<button type="button" class="btn btn-default btn-lg" onclick="geraPontosAleatorios()">
+							<span class="glyphicon glyphicon-star"></span>go!
+						</button>
+					</div>
+				</li>
+				<li>
+					<div style="color: #2A03F7 !important">Mutação:</div>
+					<div>
+						<input id="iMutacao" type="text" class="form-control"
+							style="width: 180px" placeholder="Taxa de Mutação %...">
+					</div>
+				</li>
+				<li>
+					<div style="color: #2A03F7 !important">Reprodução:</div>
+					<div>
+						<input id="iReproducao" type="text" class="form-control"
+							placeholder="Taxa de Reprodução %..." style="width: 180px">
+					</div>
+				</li>
+				<li>
+					<div style="color: #2A03F7 !important">População:</div>
+					<div>
+						<input id="iPopulacaoInicial" type="text" class="form-control"
+							placeholder="População Inicial ..." style="width: 180px">
+					</div>
+
+				</li>
+
+			</ul>
+		</div>
+
+		<!-- Page content -->
+		<div id="page-content-wrapper" style="background: #000;">
+			<!-- Keep all page content within the page-content inset div! -->
+			<div class="page-content inset">
+				<nav class="navbar navbar-inverse" role="navigation">
+					<div class="container-fluid">
+
+						<button type="button" class="btn btn-navbar"
+							data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"> </span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="brand" href="#">Genéticos</a>
+						<div class="nav-collapse collapse">
+							<ul class="nav">
+								<form class="navbar-form navbar-right" role="form">
+									<div class="form-group">
+										<ul class="nav">
+											<li class="dropdown"><a href="#" class="dropdown-toggle"
+												data-toggle="dropdown">Algoritmos <b class="caret"></b>
+											</a>
+												<ul class="dropdown-menu">
+													<li><a href="#contact">Clarke and Writing</a></li>
+													<li><a href="#contact">Genéticos</a></li>
+													<li><a href="#contact">Formigas</a></li>
+												</ul></li>
+											<li><a href="#contact">Sobre</a></li>
+										</ul>
+
+										<a class="btn btn-primary btn-lg" onclick="exealgo()"
+											role="button">Executar</a> <a class="btn btn-primary btn-lg"
+											onclick="reiniciaDados()" role="button">Limpar Rota</a>
+
+									</div>
+								</form>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div>
+			<canvas id="quadro" style="background: beige;"></canvas>
+			<canvas id="quadrosave" hidden="true" style="display: none"></canvas>
+		</div>
+	</div>
+
+	<!-- Custom JavaScript for the Menu Toggle -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("active");
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+@CHARSET "ISO-8859-1";
+
+.quadro{
+	cursor:crosshair;
+	background: beige;	
+}
+
+.btnGo{
+	vertical-align: top !important;
+	margin-left: 0cm;
+	height: 31px;
+	background-color: rgb(48, 32, 233);
+	border: none;
+	color: rgb(240, 232, 232);
+}
+
+.btnMenu{
+	cursor:pointer !important;
+}
+
+.labelInput{
+	color: #FF064C !important;	
+}
+
+.gen div{
+	color: #2A03F7 !important;
+}
